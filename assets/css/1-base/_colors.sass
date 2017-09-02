@@ -1,0 +1,15 @@
+$c-bg-light: #eee
+$c-dark: #333
+
+$primary-color: #206F9C
+$primary-dark: #6d7986
+$bright-color: #1A8BCB
+$dark-color: #272727
+$body-color: #dddddd
+$bg-color: lighten($primary-color,60%)
+$special-color: -webkit-linear-gradient(top,$primary-color 0%,$primary-color 60%,$bright-color 100%)
+
+=bg-gradient($color1,$color2)
+  background: -webkit-linear-gradient(top,$color1 0%,$color1 60%,$color2 100%)
+  background: -moz-linear-gradient(top,$color1 0%,$color1 60%,$color2 100%)
+  background: linear-gradient(top,$color1 0%,$color1 60%,$color2 100%)

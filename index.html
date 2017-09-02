@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Jesus Guerrero</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Tangerine">
+  <link rel="stylesheet" href="assets/css/main.css?version=2.0">
+
+  <link href="favicon.png" rel="icon" type="image/png" />
+  <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+
+</head>
+
+<body>
+
+  <header class="mrow">
+    <div class="brand col-7 col-7-x">
+      <h2 id="logo" class="">JG</h2>
+      <h2 id="name" class="">Jesus <b>Guerrero</b></h2>
+    </div>
+    <nav id="nav" class="">
+      <li><a class="nav-buttons" href="#cover">Home</a></li>
+      <li><a class="nav-buttons" href="#about">About</a></li>
+      <li><a class="nav-buttons" href="#skills">Skills</a></li>
+      <li><a class="nav-buttons" href="#portfolio" >Work</a></li>
+      <li><a class="nav-buttons" href="#insanecode">+More</a></li>
+      <li><a class="nav-buttons" href="#contact">Contact</a></li>
+      <li><a class="nav-buttons" href="spanish/index.html"><i class="material-icons">public</i></a></li>
+    </nav>
+    <div id="toggle" class="toggle col-3 col-3-x left">
+      <p>
+        <i id="btnToggle" class="material-icons left md-48">&#xE5D2;</i>
+      </p>
+
+    </div>
+  </header>
+
+  <section>
+
+   <!-- cover section --> 
+    <article class="section-part cover" id="cover"> 
+      <div class="cards col-5">
+        <div class="diagonal-separator hidden-xs"></div>
+        <div id="logo-cover" class="">JG</div>
+        <img src="https://api.sololearn.com/Uploads/Avatars/168854.jpg" class="profile-pic" alt="">
+        
+      </div>
+
+      <div class="main-content">
+        <div class="cover-phrase">
+          <p> <span>"Keep it simple, but make it awesome"</span></p>
+        </div>
+        <div class="cover-title">Jesús Guerrero Alvarez</div>
+        <div class="cover-sub-title">Front-End Developer</div>
+
+        <small class="hidden-xs">*Press key down and key up <br>to move through the webpage </small>
+      </div>
+      
+    </article>
+
+    <!-- cover section -->
+
+    <article class="section-part about" id="about">
+      <div class=" cards col-5">
+        <h1 class="white-remark"> Hi, I'm Jesus Guerrero</h1>
+      </div>
+      <div class="cards col-5">
+        <p>
+          I'm a system engineering student from Dominican Republic who is passionate about programming,web development.I love to learn
+          new things, share knowledge and create things.
+        </p>
+
+        <br>
+
+      </div>
+
+
+      <img id="i-splash-computer" class="material-icons splash-i" src="./assets/img/ic_computer.svg" />
+      <img id="i-splash-books" class="material-icons splash-i" src="./assets/img/ic_command_line.svg" />
+
+
+      <button class="next btn-primary btn-left hidden-xs" data-href="skills"><i class="material-icons">arrow_downward</i> Skills</button>
+    </article>
+
+    <article id="skills" class="section-part skills">
+      <div class="div-title">
+        <h2>Skills</h2>
+      </div>
+
+      <div class="card-container inverse">
+        <div class="cards col-5 ">
+
+          <div class="search-bar">
+            <input type="text" id="searcher">
+            <button class="btn-search">
+              <i class="material-icons">search</i> 
+            </button>
+          </div>
+
+          <div class="knowledge">
+            <div class="knowledge-card">
+              I am fluent in front-end stuff, concerned about responsive design and I have worked with sass,bootstrap</div>
+            <div class="knowledge-card">I have intermediate knowledge in PHP, MySql and I have worked with MVC php using Code Igniter</div>
+            <div class="knowledge-card">I have discovered Electron a few months ago and I am learning a little bit about it, I just love it!</div>
+
+          </div>
+
+
+        </div>
+
+        <div class="cards col-5">
+          <ul class="skills-list">
+            <li>HTML5/CSS3</li>
+            <li>JavaScript/Jquery</li>
+            <li>MySql</li>
+            <li>Sass</li>
+            <li>Jade/Pug</li>
+            <li>PHP/Code Igniter</li>
+            <li>Wordpress</li>
+            <li>GIT</li>
+            <li>Electron</li>
+          </ul>
+
+        </div>
+
+        <button class="next btn-white hidden-xs" data-href="portfolio"> Work <i class="material-icons">arrow_downward</i></button>
+    </article>
+
+    </article>
+
+    <article id="portfolio" class="section-part portfolio">
+      <div class="div-title dark-title">
+        <h2>Work</h2>
+      </div>
+
+      <div class="card-container work-example-container">
+
+          <div class="work-example">
+            <div class="work-images">
+              <img class="project-images" src="./assets/img/home.png" alt="">
+            </div>
+            <div class="work-title"><h2 class="text-center">IC Payment</h2></div>
+            <div class="work-technologies text-center">PHP/CodeIgniter   AJAX   JavaScript   Sass   SQL/MySql</div>
+          </div>
+
+          <div class="work-example">
+            <div class="work-images">
+              <a href="https://github.com/jesusantguerrero/icnote"><img class="project-images" src="./assets/img/img6.png" alt=""></a>
+            </div>
+            <div class="work-title"><a href="https://github.com/jesusantguerrero/icnote"><h2 class="text-center">IC Note</h2></a></div>
+            <div class="work-technologies text-center">JavaScript Electron  Nodejs</div>
+            <div class="work-description text-center">
+              <small>
+                  A note taker using web technologies and Electron
+                  with IC Note you can save notes, todo lists using markdown
+              </small>
+            </div>
+          </div>
+
+          <div class="work-example">
+            <div class="work-images">
+             <a href="http://jesusantguerrero.com/neighborhood-tour/"><img class="project-images" src="./assets/img/tour.png" alt=""></a>
+            </div>
+            <div class="work-title"><a href="http://jesusantguerrero.com/neighborhood-tour/"><h2 class="text-center">Tour</h2></a></div>
+            <div class="work-technologies text-center">JavaScript Design Patterns | MV* Model | Google Maps API | Vue.js</div>
+          </div>
+
+        </div>
+
+        <button class="next btn-dark btn-left hidden-xs" data-href="insanecode">Insane Code <i class="material-icons">arrow_downward</i></button>
+    </article>
+
+    <article class="section-part insanecode" id="insanecode">
+
+      <div class="div-title">
+        <h2>My Project</h2>
+      </div>
+      <div class="card-container">
+        <div class="cards col-5">
+          <h1>What is?</h1>
+          <p>
+            Insane Code, We are a group of System Engineering students, it is where we let free our love for programming and under the name wich we
+            do our projects because it describes our passion for programming.
+          </p>
+        </div>
+
+        <div class="cards col-5 vcenter center">
+
+          <img class="insane-images" src="assets/img/insanecode_logo.svg" alt="insane code logo">
+
+        </div>
+      </div>
+      <div class="card-container inverse">
+        <div class="cards col-5 vcenter">
+
+          <img class="insane-images"src="assets/img/languages_logo.svg" alt="languages">
+
+        </div>
+
+        <div class="cards col-5">
+          <h2>Purpose</h2>
+          <p>
+            The main purpose of Insane Code is that everybody involved in,is going to be able to learn about programming, web technologies
+            and help others.
+          </p>
+        </div>
+      </div>
+
+      <button class="next btn-white hidden-xs" data-href="contact">Contacts<i class="material-icons">arrow_downward</i></button>
+    </article>
+
+    <article id="contact" class="section-part contacts row-9">
+      <div class="div-title">
+        <h2>Contact</h2>
+      </div>
+
+      <div class="card-container">
+        <div class=" cards splash-images col-5 hidden-xs">
+          <div class="img-1">
+            <img class="svg-images" src="assets/img/ic_message.svg" alt="">
+          </div>
+
+          <div class="img-2">
+            <img class="svg-images lg" src="assets/img/ic_mail.svg" alt="">
+            <img class="svg-images lg" src="assets/img/ic_near_me.svg" alt="">
+          </div>
+
+        </div>
+
+        <div class="cards col-5">
+          <ul class="social-networks">
+            <li><a target="_blank" href="mailto:jesusant.guerrero@gmail.com">
+              <img class="net-icons" src="assets/img/ic_mail.1.svg" alt="jesusant.guerrero@gmail.com">
+              <span>jesusant.guerrero@gmail.com</span></a></li>
+
+            <li><a target="_blank" href="https://github.com/jesusantguerrero">
+              <img class="net-icons" src="assets/img/ic_github.svg" alt="Jesus Guerrero's acount in GitHub">
+              <span>github.com/jesusantguerrero</span></a></li>
+            <li><a target="_blank" href="https://web.facebook.com/Jesusant.guerrero">
+              <img class="net-icons" src="assets/img/ic_social_facebook.svg" alt="Jesus Guerrero's acount in Facebook"><span>Jesus Guerrero</span></a></li>
+
+            <li><a target="_blank" href="https://github.com/jesusantguerrero">
+              <img class="net-icons" src="assets/img/ic_social_twitter.svg" alt="Jesus Guerrero's acount in Twitter"><span>@jesusntguerrero</span></a></li>
+          </ul>
+        </div>
+      </div>
+
+    </article>
+    <footer class="row-1">
+      <div>
+        2017 Code and Design by Jesus Guerrero | Insane Code all rights reserved
+      </div>
+    </footer>
+
+  </section>
+
+<!-- google analytics -->
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-97873154-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- end of google analytics -->
+
+  <script src="assets/js/base.js"></script>
+</body>
+
+</html>

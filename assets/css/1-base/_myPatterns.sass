@@ -1,0 +1,180 @@
+// normal size: 
+.col-3
+  width: 33%
+
+.col-4
+  width: 40%
+
+.col-5
+  width: 50%
+
+.col-6
+  width: 60%
+
+.col-10
+  width: 100%
+
+.mrow
+  display: flex
+
+.row-2
+  height: 20vh
+
+.row-8 
+  height: 80vh
+
+.row-9 
+  height: 90vh
+
+.card-container
+  min-height: 30%
+  height: max-content
+  display: flex
+  flex-direction: row
+  margin: 50px 0
+
+
+h1, h2, h3, h4, h5, h6
+  font-weight: 500
+  line-height: 1.1
+  margin: 0 0 0 0
+
+button,
+.btn
+  border: 0
+  
+
+nav,.low-nav
+  display: inline-block
+  width: 60%
+  display: flex
+  flex-direction: row
+  justify-content: flex-end
+  align-items: center
+
+
+nav li, .nav-space
+  text-decoration: none
+  list-style: none
+  margin: 1%
+
+
+.nav-buttons
+  display: block
+  text-decoration: none
+  width: 100%
+  font-size: 1.6em
+  margin: 0 2%
+  padding: 0 10%
+
+.nav-buttons:hover
+  text-decoration: none
+
+article
+  padding: 0 50px
+  font-size: .8em
+
+p 
+  // font-family: Lato
+  margin: 0 0 10px
+  line-height: 1.7
+  
+
+//helpers 
+
+.vcenter
+  display: flex
+  text-align: center
+  align-items: center
+
+.left
+  justify-content: flex-end
+  text-align: left
+
+.center
+  display: flex
+  text-align: center
+  justify-content: center
+  align-items: center
+
+.text-center
+  text-align: center
+
+.overflow-hidden
+  overflow: hidden
+
+
+// tablets sm
+
+@media(max-width: 990px )
+  .cards
+    width: 100%
+    font-size: .8em
+    text-align: left
+    padding: 5% 2%
+
+  .center
+    display: flex
+    text-align: center
+    justify-content: center
+    align-items: center
+    
+  
+  .hidden-sm
+    visibility: hidden
+    height: 0
+
+
+// mobile xs
+
+@media (max-width: 768px)
+  .hidden-xs
+    visibility: hidden
+    height: 0
+
+  article
+    padding: 0 5px
+    font-size: .8em
+
+  footer
+    flex-direction: column
+
+    div
+      width: 100%
+    
+      &:nth-child(1)
+        order: 1
+        padding: 3% 0
+  
+  .col-10-x
+    width: 100%
+    margin: 5px
+
+
+  //helpers 
+
+  .vcenter
+    display: flex
+    text-align: center
+    align-items: center
+    justify-content: center
+
+  .left
+    justify-content: flex-end
+    text-align: left
+
+  .center
+    display: flex
+    text-align: center
+    justify-content: center
+    align-items: center
+
+  .text-center
+    text-align: center
+
+  .overflow-hidden
+    overflow: hidden
+
+
+
+

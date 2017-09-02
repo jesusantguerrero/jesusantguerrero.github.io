@@ -1,0 +1,65 @@
+@import _normalize
+@import _myPatterns
+@import _colors
+@import _buttons
+
+@font-face
+  font-family: squarefont
+  src: url("../fonts/Square.ttf")
+
+@font-face
+  font-family: roboto
+  src: url("../fonts/Roboto-Light.ttf")
+
+@import url('https://fonts.googleapis.com/css?family=Tangerine')
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro')
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+body
+  background: whitesmoke
+  font-family: 'Open Sans', sans-serif
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  text-rendering: optimizeLegibility   
+  -moz-font-feature-settings: "liga" on
+  h1
+    font-family: 'Source Sans Pro', sans-serif
+    font-weight: bolder
+
+::-webkit-scrollbar-track
+  background-color: transparent
+  cursor: default
+  
+
+
+::-webkit-scrollbar
+  width: 15px
+  background-color: transparent
+  cursor: default
+  display: none
+
+
+::-webkit-scrollbar-thumb
+  background-color: #aaa
+  cursor: default
+  border-radius: 3px  
+
+
+//smartphones
+
+@media (max-width: 768px)
+
+  .div-title
+    display: flex
+    justify-content: center
+    color: white
+    padding: 2% 0
+    margin: 3%
+
+
+  body,article
+    overflow-y: auto
