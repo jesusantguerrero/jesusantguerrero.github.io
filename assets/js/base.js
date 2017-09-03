@@ -55,7 +55,6 @@ $(function () {
 
   $(window).scroll(function () {
     checkPosition()
-    console.log("scolling")
   })
 
   $body.on('keydown', function (event) {
@@ -99,7 +98,6 @@ $(function () {
 		// ===== Menu Functions =====
 
   function toggleMenu () {
-    console.log("menu clickado")
     !menuState ? showMenu() : hideMenu()
   }
 
