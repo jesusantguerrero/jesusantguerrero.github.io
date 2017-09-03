@@ -38,7 +38,6 @@ $(function () {
       id = element.attr('href').slice(1)
     }
     $scrollElement.animate({scrollTop: sectionsPart[id]}, 500, function () {
-      checkPosition()
       currentPosition = getCurrentPosition()
     })
     if (type != 'button') toggleMenu()
@@ -56,6 +55,7 @@ $(function () {
 
   $(window).scroll(function () {
     checkPosition()
+    console.log("scolling")
   })
 
   $body.on('keydown', function (event) {
@@ -99,6 +99,7 @@ $(function () {
 		// ===== Menu Functions =====
 
   function toggleMenu () {
+    console.log("menu clickado")
     !menuState ? showMenu() : hideMenu()
   }
 
@@ -131,19 +132,17 @@ $(function () {
   function goDown () {
     currentPosition++
     $scrollElement.animate({scrollTop: sectionsPos[currentPosition]}, 500)
-    checkPosition()
   }
 
   function goUp () {
     currentPosition--
     $scrollElement.animate({scrollTop: sectionsPos[currentPosition]}, 500)
-    checkPosition()
   }
 
   function getCurrentPosition () {
     var i = 0
     for (i = 0; i < sectionsPos.length - 1; i++) {
-			if (sectionsPos[i] >= $(window).scrollTop() && $(window).scrollTop() < sectionsPos[i + 1]) {
+			if (sectionsPos[i] >= scrollPosition && scrollPosition < sectionsPos[i + 1]) {
    			return i
  			}
     }
