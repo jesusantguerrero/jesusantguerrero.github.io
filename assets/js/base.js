@@ -53,9 +53,11 @@ $(function () {
     getSectionsOffset()
   })
 
-  $(window).scroll(function () {
-    checkPosition()
-  })
+  function scrollDesktopListener(){
+    $(window).scroll(function () {
+      checkPosition()
+    })
+  }
 
   $body.on('keydown', function (event) {
     moveWithKey(event)
@@ -92,7 +94,15 @@ $(function () {
     } else {
       $body.on('keydown', function (event) {
         moveWithKey(event)
+        scrollDesktopListener()
       })
+    }
+
+    if (window.innerWidth < 768){
+      $(window).off('scroll')
+      mobileFunctions()
+    }else{
+      quitMobileFunctions()
     }
   }
 		// ===== Menu Functions =====
@@ -264,4 +274,19 @@ $(function () {
   (function linksTarget () {
     $('a').attr('target', '_blank')
   })()
+
+
+  function mobileFunctions(){
+    $(document).on('scrollstart',function(){
+      checkPosition();
+    })
+  }
+
+  function quitMobileFunctions(){
+
+  }
 })
+
+
+
+
