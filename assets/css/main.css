@@ -551,13 +551,12 @@ nav {
 @media (max-width: 768px) {
   header {
     font-size: 0.8em;
-    height: 10vh;
+    height: 82px;
     padding: 0 20px; }
 
   #logo {
     font-size: 40px;
     font-family: squarefont;
-    height: 100%;
     padding: 10px 0; }
 
   #name {
@@ -587,8 +586,7 @@ nav {
   .toggle {
     display: flex;
     height: fit-content;
-    width: fit-content;
-    height: 100%; }
+    width: fit-content; }
 
   #btnToggle {
     font-size: 30px; }
@@ -941,8 +939,7 @@ a {
     left: -200px;
     width: 250px;
     height: 250px;
-    font-size: 90px;
-    display: none; }
+    font-size: 90px; }
 
   .cards .profile-pic {
     width: 200px;

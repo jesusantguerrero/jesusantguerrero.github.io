@@ -98,6 +98,7 @@ $(function () {
 		// ===== Menu Functions =====
 
   function toggleMenu () {
+    console.log("hola clickado")
     !menuState ? showMenu() : hideMenu()
   }
 
