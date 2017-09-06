@@ -555,7 +555,8 @@ nav {
   header {
     font-size: 0.8em;
     height: 60px;
-    padding: 0 20px; }
+    padding: 0 20px;
+    background: transparent; }
 
   #logo {
     font-size: 40px;
@@ -593,6 +594,9 @@ nav {
 
   #btnToggle {
     font-size: 30px; }
+
+  .menu-overwhite {
+    background: #206F9C; }
 
   .menu-overwhite .nav-buttons,
   .menu-dark .nav-buttons {
@@ -963,7 +967,9 @@ a {
       font-size: 20px; }
 
   .cover {
-    flex-direction: column; }
+    flex-direction: column;
+    background-image: url("https://images2.alphacoders.com/698/698137.jpg");
+    background-size: cover; }
     .cover div:nth-child(1) {
       display: flex;
       justify-content: center; }
