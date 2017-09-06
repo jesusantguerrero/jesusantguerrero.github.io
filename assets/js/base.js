@@ -277,13 +277,13 @@ $(function () {
 
 
   function mobileFunctions(){
-    $(document).on('scrollstart',function(){
+    $('body').on('touchmove',function(){
       checkPosition();
     })
   }
 
   function quitMobileFunctions(){
-
+    $('body').off('touchmove')
   }
 })
 
