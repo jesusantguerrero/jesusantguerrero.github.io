@@ -1,4 +1,5 @@
 $(function () {
+  
   var currentPosition = 0,
     scrollPosition = 0,
     menuState = false,
@@ -53,15 +54,23 @@ $(function () {
     getSectionsOffset()
   })
 
-  function scrollDesktopListener(){
+  function desktopListeners(){
     $(window).scroll(function () {
       checkPosition()
     })
+    if (window.innerHeight < 630) {
+      $body.off('keydown')
+    } else {
+      $body.on('keydown', function (event) {
+        moveWithKey(event)
+      })
+    }
   }
 
-  $body.on('keydown', function (event) {
-    moveWithKey(event)
-  })
+  function quitDesktopListeners () {
+    $body.off('keydown')
+    $(window).off('scroll')
+  }
 
 // Functions
   function moveWithKey (event) {
@@ -78,37 +87,29 @@ $(function () {
     var id, offset, $this
 
     $('.section-part').each(function (i, value) {
-      $this = $(this)
-      offset = $this.offset().top
-      id = $this.attr('id')
+      $this   = $(this)
+      offset  = $this.offset().top
+      id      = $this.attr('id')
 
       sectionsPart[id] = offset
-      sectionsPos[i] = offset
+      sectionsPos[i]   = offset
     })
 
     currentPosition = getCurrentPosition()
     checkPosition()
 
-    if (window.innerHeight < 638) {
-      $body.off('keydown')
+    if (window.innerWidth > 768) {
+      quitMobileListeners()
+      desktopListeners()
     } else {
-      $body.on('keydown', function (event) {
-        moveWithKey(event)
-        scrollDesktopListener()
-      })
-    }
-
-    if (window.innerWidth < 768){
-      $(window).off('scroll')
-      mobileFunctions()
-    }else{
-      quitMobileFunctions()
+      quitDesktopListeners()
+      mobileListeners()
     }
   }
-		// ===== Menu Functions =====
+  
+  // ===== Menu Functions =====
 
   function toggleMenu () {
-    console.log("hola clickado")
     !menuState ? showMenu() : hideMenu()
   }
 
@@ -136,7 +137,7 @@ $(function () {
     menuState = false
   }
 
-		// ==== Navigation movement and scroll ralated functions =====
+// ==== Navigation movement and scroll ralated functions =====
 
   function goDown () {
     currentPosition++
@@ -192,7 +193,7 @@ $(function () {
     }
   }
 
-		// ==== Image animation functions ====
+// ==== Image animation functions ====
 
   function coverAnimations () {
     if (window.innerWidth < 768) {
@@ -276,15 +277,16 @@ $(function () {
   })()
 
 
-  function mobileFunctions(){
-    $('body').on('touchmove',function(){
+  function mobileListeners(){
+    $('body').on('touchstart',function(){
       checkPosition();
     })
   }
 
-  function quitMobileFunctions(){
-    $('body').off('touchmove')
+  function quitMobileListeners(){
+    $('body').off('touchstart')
   }
+
 })
 
 
