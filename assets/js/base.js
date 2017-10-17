@@ -58,6 +58,7 @@ $(function () {
     $(window).scroll(function () {
       checkPosition()
     })
+
     if (window.innerHeight < 630) {
       $body.off('keydown')
     } else {
@@ -98,13 +99,7 @@ $(function () {
     currentPosition = getCurrentPosition()
     checkPosition()
 
-    if (window.innerWidth > 768) {
-      quitMobileListeners()
-      desktopListeners()
-    } else {
-      quitDesktopListeners()
-      mobileListeners()
-    }
+    desktopListeners()
   }
   
   // ===== Menu Functions =====
@@ -268,24 +263,13 @@ $(function () {
     $.each(workExample, function (index, el) {
       setInterval(function () {
         el.className = el.className + ' move-in'
-      }, 200)
+      }, 500)
     })
   }
 
   (function linksTarget () {
     $('a').attr('target', '_blank')
   })()
-
-
-  function mobileListeners(){
-    $('body').on('touchstart',function(){
-      checkPosition();
-    })
-  }
-
-  function quitMobileListeners(){
-    $('body').off('touchstart')
-  }
 
 })
 
