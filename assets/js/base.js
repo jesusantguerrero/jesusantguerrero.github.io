@@ -44,7 +44,7 @@ $(function () {
     if (type != 'button') toggleMenu()
   }
 
-  $btntoggle.click(toggleMenu)
+  $btntoggle.on('click',toggleMenu)
 
   $btnNext.on('click', function (e) {
     goTo(e, $(this), 'button')
@@ -55,9 +55,15 @@ $(function () {
   })
 
   function desktopListeners(){
-    $(window).scroll(function () {
-      checkPosition()
-    })
+
+    if (window.innerWidth > 768) {
+      $(document.body).off()
+      $(window).on('scroll',checkPosition);
+    } else {
+      $(window).off();
+      $(document.body).on('touchmove', checkPosition);
+    }
+
 
     if (window.innerHeight < 630) {
       $body.off('keydown')
@@ -86,7 +92,6 @@ $(function () {
 
   function getSectionsOffset () {
     var id, offset, $this
-
     $('.section-part').each(function (i, value) {
       $this   = $(this)
       offset  = $this.offset().top
