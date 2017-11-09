@@ -1,24 +1,24 @@
 $(function () {
   
-  var currentPosition = 0,
-    scrollPosition = 0,
-    menuState = false,
-    sectionsPos = [],
-    sectionsPart = {},
-    animationsState = [false, false, false],
-    $scrollElement = $('html,body'),
-    $body = $('body'),
-    $indexSection = $('section'),
-    $articles = $('article'),
-    $nav = $('#nav'),
-    $logoCover = $('#logo-cover'),
-    $coverPhrase = $('.cover-phrase'),
-    $btntoggle = $('#btnToggle'),
-    $iSplashComputer = $('#i-splash-computer'),
-    $iSplashBooks = $('#i-splash-books'),
-    $navButtons = $('.nav-buttons'),
-    $btnNext = $('.next')
-  $header = $('header')
+  const currentPosition   = 0,
+        scrollPosition    = 0,
+        menuState         = false,
+        sectionsPos       = [],
+        sectionsPart      = {},
+        animationsState   = [false, false, false],
+        $scrollElement    = $('html,body'),
+        $body             = $('body'),
+        $indexSection     = $('section'),
+        $articles         = $('article'),
+        $nav              = $('#nav'),
+        $logoCover        = $('#logo-cover'),
+        $coverPhrase      = $('.cover-phrase'),
+        $btntoggle        = $('#btnToggle'),
+        $iSplashComputer  = $('#i-splash-computer'),
+        $iSplashBooks     = $('#i-splash-books'),
+        $navButtons       = $('.nav-buttons'),
+        $btnNext          = $('.next')
+        $header           = $('header')
 
 // main calls
   getSectionsOffset()
