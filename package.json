@@ -1,0 +1,24 @@
+{
+  "name": "jesusantguerrero",
+  "version": "1.0.0",
+  "description": "[jesusantguerrero.com](https://jesusantguerrero.com)",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./node webpack ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesusantguerrero/jesusantguerrero.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jesusantguerrero/jesusantguerrero.github.io/issues"
+  },
+  "homepage": "https://github.com/jesusantguerrero/jesusantguerrero.github.io#readme",
+  "devDependencies": {
+    "webpack": "3.8.1"
+  }
+}
