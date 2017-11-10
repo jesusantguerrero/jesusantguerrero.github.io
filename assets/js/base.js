@@ -204,6 +204,7 @@ $(function () {
       $header.removeClass('menu-overwhite')
       $header.addClass('just-menu menu-dark')
       workAnimations()
+
     } else if (scrollPosition >= sectionsPos[4] && scrollPosition < sectionsPos[5]){
       $header.removeClass('menu-dark menu-overwhite')
       $header.addClass('just-menu')
@@ -315,7 +316,7 @@ $(function () {
     })
 
     $.each(workExample, function (index, el) {
-      setInterval(function () {
+      setTimeout(function () {
         el.className = el.className + ' move-in'
       }, 500)
     })
