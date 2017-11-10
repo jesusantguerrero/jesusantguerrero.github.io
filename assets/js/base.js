@@ -177,9 +177,12 @@ $(function () {
 
   function checkPosition() {
     scrollPosition = $(window).scrollTop()
+    alert(scrollPosition);
 
     if (scrollPosition >= 0 && scrollPosition < sectionsPos[1]) {
+
       $header.removeClass('just-menu menu-overwhite menu-dark')
+    
     } else if (scrollPosition >= sectionsPos[1] && scrollPosition < sectionsPos[2]) {
       $header.addClass('menu-overwhite')
       $header.removeClass('just-menu menu-dark')
@@ -196,6 +199,7 @@ $(function () {
         knowledgeAnimations()
         animationsState[2] = true
       }
+
     } else if (scrollPosition >= sectionsPos[3] && scrollPosition < sectionsPos[4]) {
       $header.removeClass('menu-overwhite')
       $header.addClass('just-menu menu-dark')
