@@ -177,7 +177,6 @@ $(function () {
 
   function checkPosition() {
     scrollPosition = $(window).scrollTop()
-    alert(scrollPosition);
 
     if (scrollPosition >= 0 && scrollPosition < sectionsPos[1]) {
 
