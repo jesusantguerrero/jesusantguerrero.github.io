@@ -300,21 +300,6 @@ $(function () {
   function workAnimations() {
     var workExample = $('.work-example')
 
-    workExample.on('mouseover', function () {
-      workExample.css({
-        opacity: '.4'
-      })
-      $(this).css({
-        opacity: '1'
-      })
-    })
-
-    workExample.on('mouseleave', function () {
-      workExample.css({
-        opacity: '1'
-      })
-    })
-
     $.each(workExample, function (index, el) {
       setTimeout(function () {
         el.className = el.className + ' move-in'
