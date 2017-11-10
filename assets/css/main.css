@@ -786,7 +786,7 @@ a {
   justify-content: center;
   align-items: center;
   position: relative;
-  display: none; }
+  border: 1px solid #ccc; }
   .work-example:hover {
     transform: scale(1.04); }
   .work-example:after {

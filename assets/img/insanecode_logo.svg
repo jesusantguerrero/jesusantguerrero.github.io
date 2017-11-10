@@ -5,7 +5,16 @@
 	 width="279.871px" height="156.408px" viewBox="0 0 279.871 156.408" enable-background="new 0 0 279.871 156.408"
 	 xml:space="preserve">
 <g>
-	<text transform="matrix(1.0883 0 0 1 16.501 64.646)"><tspan x="0" y="0" fill="#FFFFFF" stroke="#1B9CD8" stroke-miterlimit="10" font-family="'SquareFont'" font-size="60.811">IN</tspan><tspan x="49.349" y="0" fill="#009FE3" font-family="'SquareFont'" font-size="60.811">SANE</tspan></text>
-	<text transform="matrix(1.0883 0 0 1 60.7188 123.8696)"><tspan x="0" y="0" fill="#FFFFFF" stroke="#1B9CD8" stroke-miterlimit="10" font-family="'SquareFont'" font-size="60.811">{</tspan><tspan x="21.527" y="0" fill="#009FE3" font-family="'SquareFont'" font-size="60.811">CODE</tspan><tspan x="162.39" y="0" fill="#FFFFFF" stroke="#1B9CD8" stroke-miterlimit="10" font-family="'SquareFont'" font-size="60.811">}</tspan></text>
+	<text transform="matrix(1.0883 0 0 1 16.501 64.6465)" fill="#FFFFFF" font-family="'SquareFont'" font-size="60.811">IN</text>
+	
+		<text transform="matrix(1.0883 0 0 1 16.501 64.6465)" fill="none" stroke="#1B9CD8" stroke-miterlimit="10" font-family="'SquareFont'" font-size="60.811">IN</text>
+	<text transform="matrix(1.0883 0 0 1 70.208 64.6465)" fill="#009FE3" font-family="'SquareFont'" font-size="60.811">SANE</text>
+	<text transform="matrix(1.0883 0 0 1 60.7188 123.8691)" fill="#FFFFFF" font-family="'SquareFont'" font-size="60.811">{</text>
+	
+		<text transform="matrix(1.0883 0 0 1 60.7188 123.8691)" fill="none" stroke="#1B9CD8" stroke-miterlimit="10" font-family="'SquareFont'" font-size="60.811">{</text>
+	<text transform="matrix(1.0883 0 0 1 84.1465 123.8691)" fill="#009FE3" font-family="'SquareFont'" font-size="60.811">CODE</text>
+	<text transform="matrix(1.0883 0 0 1 237.4482 123.8691)" fill="#FFFFFF" font-family="'SquareFont'" font-size="60.811">}</text>
+	
+		<text transform="matrix(1.0883 0 0 1 237.4482 123.8691)" fill="none" stroke="#1B9CD8" stroke-miterlimit="10" font-family="'SquareFont'" font-size="60.811">}</text>
 </g>
 </svg>
