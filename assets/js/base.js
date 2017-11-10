@@ -200,7 +200,7 @@ $(function () {
       $header.removeClass('menu-overwhite')
       $header.addClass('just-menu menu-dark')
       workAnimations()
-    } else {
+    } else if (scrollPosition >= sectionsPos[4] && scrollPosition < sectionsPos[5]){
       $header.removeClass('menu-dark menu-overwhite')
       $header.addClass('just-menu')
     }
