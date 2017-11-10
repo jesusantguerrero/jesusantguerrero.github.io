@@ -62,7 +62,7 @@ $(function () {
       $(window).on('scroll', checkPosition);
     } else {
       $(window).off();
-      $(window).on('scroll', checkPosition);
+      $(window, document.body).on('scroll', checkPosition);
     }
 
 
