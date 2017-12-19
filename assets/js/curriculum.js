@@ -25,9 +25,11 @@ const contacts = {
 }
 
 // my blog, my youtube channel, the company
-const work = {
-
-}
+const work = [
+  {
+    
+  }
+]
 
 
 export default curriculum = {
