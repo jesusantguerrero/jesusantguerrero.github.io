@@ -442,7 +442,7 @@ header {
     visibility: hidden; }
 
 #logo {
-  font-family: squarefont;
+  font-family: squarefont, sans-serif;
   font-size: 5em;
   height: 100%;
   padding: 2% 0;
@@ -629,8 +629,7 @@ article {
     font-weight: bolder; }
   .main-content .cover-phrase {
     margin-bottom: 5%;
-    font-size: 30px;
-    opacity: 0; }
+    font-size: 30px; }
 
 small {
   color: white; }
@@ -641,7 +640,7 @@ small {
 
 #logo-cover {
   top: 20%;
-  left: -200px;
+  left: 25%;
   width: 250px;
   height: 250px;
   font-size: 250px;
@@ -688,7 +687,6 @@ small {
   overflow: hidden; }
   .contacts .card-container {
     color: #ddd;
-    overflow: hidden;
     max-height: 500px; }
   .contacts .div-title {
     padding: 5% 0 10% 0; }
@@ -729,8 +727,7 @@ a {
 
 .splash-i {
   position: absolute;
-  color: #206F9C;
-  opacity: 0; }
+  color: #206F9C; }
 
 #i-splash-computer {
   right: 18%;
@@ -928,7 +925,7 @@ a {
 
   #logo-cover {
     top: 20%;
-    left: -200px;
+    left: 25%;
     width: 250px;
     height: 250px;
     font-size: 90px; }
@@ -980,7 +977,8 @@ a {
 
   .work-example {
     width: 85%;
-    margin: 20px 7.5%; }
+    margin: 20px 7.5%;
+    border: 1px solid #ccc; }
     .work-example .work-images {
       justify-content: center; }
 

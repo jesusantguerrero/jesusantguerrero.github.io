@@ -1,30 +1,40 @@
-$(function () {
+import $ from 'jquery';
+
+export default () => { 
+  $(function () {
   
-  const currentPosition   = 0,
-        scrollPosition    = 0,
-        menuState         = false,
-        sectionsPos       = [],
-        sectionsPart      = {},
-        animationsState   = [false, false, false],
-        $scrollElement    = $('html,body'),
-        $body             = $('body'),
-        $indexSection     = $('section'),
-        $articles         = $('article'),
-        $nav              = $('#nav'),
-        $logoCover        = $('#logo-cover'),
-        $coverPhrase      = $('.cover-phrase'),
-        $btntoggle        = $('#btnToggle'),
-        $iSplashComputer  = $('#i-splash-computer'),
-        $iSplashBooks     = $('#i-splash-books'),
-        $navButtons       = $('.nav-buttons'),
-        $btnNext          = $('.next')
-        $header           = $('header')
+  let currentPosition     = 0;
+  let scrollPosition    = 0;
+  let menuState         = false;
+  const sectionsPos       = [];
+  const sectionsPart      = {};
+  const animationsState   = [false, false, false];
+  const $scrollElement    = $('html,body');
+  const $body             = $('body');
+  const $indexSection     = $('section');
+  const $articles         = $('article');
+  const $nav              = $('#nav');
+  const $logoCover        = $('#logo-cover');
+  const $coverPhrase      = $('.cover-phrase');
+  const $btntoggle        = $('#btnToggle');
+  const $iSplashComputer  = $('#i-splash-computer');
+  const $iSplashBooks     = $('#i-splash-books');
+  const $navButtons       = $('.nav-buttons');
+  const $btnNext          = $('.next');
+  const $header           = $('header');
 
 // main calls
   getSectionsOffset()
-  coverAnimations()
+  desktopListeners()
 
 // events
+  $(window).on('resize', function () {
+    getSectionsOffset()
+  })
+
+  $(window).on('scroll', function () {
+    checkPosition()
+  })
 
   $navButtons.on('click', function (e) {
     goTo(e, $(this))
@@ -50,36 +60,12 @@ $(function () {
     goTo(e, $(this), 'button')
   })
 
-  $(window).on('resize', function () {
-    getSectionsOffset()
-  })
-
-  function desktopListeners(){
-
-    if (window.innerWidth > 768) {
-      $(document.body).off()
-      $(window).on('scroll',checkPosition);
-    } else {
-      $(window).off();
-      $(document.body).on('touchmove', checkPosition);
-    }
+ 
 
 
-    if (window.innerHeight < 630) {
-      $body.off('keydown')
-    } else {
-      $body.on('keydown', function (event) {
-        moveWithKey(event)
-      })
-    }
-  }
 
-  function quitDesktopListeners () {
-    $body.off('keydown')
-    $(window).off('scroll')
-  }
+// main Functions
 
-// Functions
   function moveWithKey (event) {
     event.stopImmediatePropagation()
     var key = event.which
@@ -105,6 +91,16 @@ $(function () {
     checkPosition()
 
     desktopListeners()
+  }
+
+  function desktopListeners(){
+    if (window.innerHeight < 630) {
+      $body.off('keydown')
+    } else {
+      $body.on('keydown', function (event) {
+        moveWithKey(event)
+      })
+    }
   }
   
   // ===== Menu Functions =====
@@ -163,22 +159,18 @@ $(function () {
   }
 
   function checkPosition () {
-    scrollPosition = $(window).scrollTop()
-
+    scrollPosition = $(window).scrollTop();
+    
     if (scrollPosition >= 0 && scrollPosition < sectionsPos[1]) {
       $header.removeClass('just-menu menu-overwhite menu-dark')
     }	else if (scrollPosition >= sectionsPos[1] && scrollPosition < sectionsPos[2]) {
       $header.addClass('menu-overwhite')
       $header.removeClass('just-menu menu-dark')
-
-      if (animationsState[1] == false) {
-        splashMovement()
-        animationsState[1] = true
-      }
+      
     }	else if (scrollPosition >= sectionsPos[2] && scrollPosition < sectionsPos[3]) {
       $header.removeClass('menu-overwhite menu-dark')
       $header.addClass('just-menu')
-
+      
       if (animationsState[2] == false) {
         knowledgeAnimations()
         animationsState[2] = true
@@ -193,29 +185,7 @@ $(function () {
     }
   }
 
-// ==== Image animation functions ====
-
-  function coverAnimations () {
-    if (window.innerWidth < 768) {
-      $logoCover.css({left: '-200px'})
-      $logoCover.animate({'left': '5%'}, 1700)
-
-      $coverPhrase.css({opacity: '0'})
-      $coverPhrase.animate({opacity: '1'}, 1700)
-    } else {
-      $logoCover.css({left: '-250px'})
-      $logoCover.animate({'left': '25%'}, 1700)
-
-      $coverPhrase.css({opacity: '0'})
-      $coverPhrase.animate({opacity: '1'}, 1700)
-    }
-  }
-
-  function splashMovement () {
-    $('.splash-i').css({opacity: '0'})
-    $iSplashComputer.animate({opacity: '.5'}, 1700)
-    $iSplashBooks.animate({opacity: '1'}, 1500)
-  }
+  // animations
 
   function knowledgeAnimations () {
     var $searcher = $('#searcher'),
@@ -272,12 +242,29 @@ $(function () {
     })
   }
 
-  (function linksTarget () {
-    $('a').attr('target', '_blank')
-  })()
+//   (function initSlick() {
+//     $('.work-example-container').slick({
+//       centerMode: true,
+//       centerPadding: '70px',
+//       slidesToShow: 3,
+//       responsive: [
+//         {
+//           breakpoint: 768,
+//           settings: {
+//             arrows: false,
+//             centerMode: true,
+//             centerPadding: '40px',
+//             slidesToShow: 3
+//           }
+//         },
+//         {
+//           breakpoint: 480,
+//           settings: 'unslick'
+//         }
+//       ]
+//     });
+        
+//   })()
 
 })
-
-
-
-
+}

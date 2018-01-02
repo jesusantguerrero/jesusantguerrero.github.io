@@ -8,6 +8,9 @@
   <title>Jesus Guerrero</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="assets/css/main.css?version=2.0">
+  <link rel="stylesheet" href="assets/css/animate.css?version=2.0">
+  <link rel="stylesheet" href="assets/third/slick/slick.css?version=2.0">
+  <link rel="stylesheet" href="assets/third/slick/slick-theme.css?version=2.0">
   <link href="favicon.png" rel="icon" type="image/png" />
 </head>
 
@@ -38,19 +41,19 @@
     <article class="section-part cover" id="cover">
       <div class="cards col-5">
         <div class="diagonal-separator hidden-xs"></div>
-        <div id="logo-cover" class="">JG</div>
+        <div id="logo-cover" class="animated slideInLeft">JG</div>
       </div>
 
       <div class="main-content">
-        <div class="cover-phrase">
+        <div class="cover-phrase animated slideInUp">
           <p>
             <span>"Keep it simple, but make it awesome"</span>
           </p>
         </div>
-        <div class="cover-title">Jesús Guerrero Alvarez</div>
-        <div class="cover-sub-title">Front-End Developer</div>
+        <div class="cover-title animated slideInUp">Jesús Guerrero Alvarez</div>
+        <div class="cover-sub-title animated slideInUp">Web Developer</div>
 
-        <small class="hidden-xs">*Press key down and key up
+        <small class="hidden-xs  animated slideInUp">*Press key down and key up
           <br>to move through the webpage </small>
       </div>
 
@@ -73,13 +76,14 @@
       </div>
 
 
-      <img id="i-splash-computer" class="material-icons splash-i" src="./assets/img/ic_computer.svg" />
-      <img id="i-splash-books" class="material-icons splash-i" src="./assets/img/ic_command_line.svg" />
+      <img id="i-splash-computer" class="material-icons splash-i animated fadeIn" src="./assets/img/ic_computer.svg" />
+      <img id="i-splash-books" class="material-icons splash-i animated fadeIn" src="./assets/img/ic_command_line.svg" />
 
 
       <button class="next btn-primary btn-left hidden-xs" data-href="skills">
         <i class="material-icons">arrow_downward</i> Skills</button>
     </article>
+
 
     <article id="skills" class="section-part skills">
       <div class="div-title">
@@ -177,14 +181,49 @@
           </div>
           <div class="work-technologies text-center">JavaScript Design Patterns | MV* Model | Google Maps API | Vue.js</div>
         </div>
+        
+        <div class="work-example">
+          <div class="work-images">
+            <a href="http://jesusantguerrero.com/neighborhood-tour/">
+              <img class="project-images" src="./assets/img/tour.png" alt="">
+            </a>
+          </div>
+          <div class="work-title">
+            <a href="http://jesusantguerrero.com/neighborhood-tour/">
+              <h2 class="text-center">Tour</h2>
+            </a>
+          </div>
+          <div class="work-technologies text-center">JavaScript Design Patterns | MV* Model | Google Maps API | Vue.js</div>
+        </div>
 
       </div>
 
-      <button class="next btn-dark btn-left hidden-xs" data-href="insanecode">Insane Code
+      <button class="next btn-dark btn-left hidden-xs" data-href="portfolio-frontend"> Front-end
         <i class="material-icons">arrow_downward</i>
       </button>
     </article>
 
+    <article id="portfolio-frontend" class="section-part portfolio">
+      <div class="div-title dark-title">
+        <h2> Front-end</h2>
+      </div>
+
+      <div class="card-container work-example-container" id="work-front-end">
+
+      </div>
+
+      <button class="next btn-dark btn-left hidden-xs" data-href="code-of-day">Code of Day
+        <i class="material-icons">arrow_downward</i>
+      </button>
+    </article>
+
+    <article class="section-part insanecode" id="code-of-day">
+            
+      <button class="next btn-white hidden-xs" data-href="insanecode"> Insane Code
+        <i class="material-icons">arrow_downward</i>
+      </button>
+
+    </article>
     <article class="section-part insanecode" id="insanecode">
 
       <div class="div-title">
@@ -259,17 +298,18 @@
                 <span>github.com/jesusantguerrero</span>
               </a>
             </li>
-            <li>
-              <a target="_blank" href="https://web.facebook.com/Jesusant.guerrero">
-                <img class="net-icons" src="assets/img/ic_social_facebook.svg" alt="Jesus Guerrero's acount in Facebook">
-                <span>Jesus Guerrero</span>
-              </a>
-            </li>
 
             <li>
               <a target="_blank" href="https://twitter.com/JesusntGuerrero">
                 <img class="net-icons" src="assets/img/ic_social_twitter.svg" alt="Jesus Guerrero's acount in Twitter">
                 <span>@jesusntguerrero</span>
+              </a>
+            </li>
+
+            <li>
+              <a target="_blank" href="https://codepen.io/freesgen">
+                <img class="net-icons" src="assets/img/ic_social_twitter.svg" alt="Jesus Guerrero's acount in Codepen">
+                <span>codepen/freesgen</span>
               </a>
             </li>
           </ul>
@@ -304,8 +344,7 @@
     ga('send', 'pageview');
   </script>
   <!-- end of google analytics -->
-  <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-  <script src="assets/js/base.js"></script>
+  <script src="./assets/js/bundle.js"></script>
 </body>
 
 </html>
