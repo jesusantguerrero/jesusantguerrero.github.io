@@ -442,7 +442,7 @@ header {
     visibility: hidden; }
 
 #logo {
-  font-family: squarefont;
+  font-family: squarefont, sans-serif;
   font-size: 5em;
   height: 100%;
   padding: 2% 0;
@@ -626,8 +626,7 @@ article {
     font-weight: bolder; }
   .main-content .cover-phrase {
     margin-bottom: 5%;
-    font-size: 30px;
-    opacity: 0; }
+    font-size: 30px; }
 
 small {
   color: white; }
@@ -638,7 +637,7 @@ small {
 
 #logo-cover {
   top: 20%;
-  left: -400px;
+  left: 25%;
   width: 250px;
   height: 250px;
   font-size: 250px;
@@ -685,7 +684,6 @@ small {
   overflow: hidden; }
   .contacts .card-container {
     color: #ddd;
-    overflow: hidden;
     max-height: 500px; }
   .contacts .div-title {
     padding: 5% 0 10% 0; }
@@ -726,8 +724,7 @@ a {
 
 .splash-i {
   position: absolute;
-  color: #206F9C;
-  opacity: 0; }
+  color: #206F9C; }
 
 #i-splash-computer {
   right: 18%;
@@ -779,14 +776,17 @@ a {
 
 .work-example {
   width: 30%;
-  padding: 10px;
   box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
-  border: 1px solid #ccc; }
+  background: #fff;
+  color: #445D6E;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  justify-content: flex-start; }
   .work-example:hover {
     transform: scale(1.04); }
   .work-example:after {
@@ -828,7 +828,7 @@ a {
   .work-example .work-title {
     margin: 15px;
     font-weight: bolder;
-    color: #6d7986;
+    color: #1d282f;
     width: fit-content;
     min-width: 200px;
     padding: 2px;
@@ -836,9 +836,9 @@ a {
     cursor: pointer; }
     .work-example .work-title a {
       text-decoration: none;
-      color: #6d7986; }
+      color: #445D6E; }
   .work-example .work-technologies {
-    color: #1A8BCB;
+    color: #60b9eb;
     margin-bottom: 15px;
     font-size: 14px; }
     .work-example .work-technologies:before {
@@ -852,16 +852,11 @@ a {
       bottom: 5px;
       transition: all ease 0.2s; }
   .work-example .work-description {
-    display: none; }
-    .work-example .work-description small {
-      color: #555; }
+    display: none;
+    padding: 10px; }
   .work-example:hover .work-description {
     display: block;
     display: none; }
-
-.work-example.move-in {
-  animation: moveIn 0.3s;
-  display: flex; }
 
 .social-networks {
   list-style: none; }
@@ -923,9 +918,13 @@ a {
     not(.dark-title)-color: #fff;
     not(.dark-title)-margin-bottom: 10px; }
 
+  .cover-phrase {
+    font-size: 30px;
+    margin-bottom: 20px; }
+
   #logo-cover {
     top: 20%;
-    left: -200px;
+    left: 25%;
     width: 250px;
     height: 250px;
     font-size: 90px; }
@@ -946,7 +945,7 @@ a {
     margin: 30% 0;
     padding: 20px; }
     .main-content .cover-phrase {
-      font-size: 20px; }
+      font-size: 50px; }
 
   .cover {
     flex-direction: column;

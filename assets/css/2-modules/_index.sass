@@ -44,7 +44,6 @@ article
   .cover-phrase
     margin-bottom: 5%
     font-size: 30px
-    opacity: 0
 
 small
   color: white
@@ -55,7 +54,7 @@ small
 
 #logo-cover
   top: 20%
-  left: -400px
+  left: 25%
   width: 250px
   height: 250px
   font-size: 250px
@@ -104,7 +103,6 @@ small
 
   .card-container
     color: #ddd
-    overflow: hidden
     max-height: 500px
   
   .div-title
@@ -153,7 +151,6 @@ a
 .splash-i
   position: absolute
   color: $primary-color
-  opacity: 0
 
 #i-splash-computer
   right: 18%
@@ -207,15 +204,18 @@ a
 
 .work-example
   width: 30%
-  padding: 10px
   box-shadow: 1px 4px 4px rgba(0,0,0,.2)
   display: flex
   flex-direction: column
   justify-content: center
   align-items: center
   position: relative
+  background: #fff
+  color: $dark-color
+  border-radius: 2px
   border: 1px solid #ccc
-
+  justify-content: flex-start
+  
   &:hover
     transform: scale(1.04)
   &:after
@@ -264,7 +264,7 @@ a
   .work-title
     margin: 15px
     font-weight: bolder
-    color: $primary-dark
+    color: darken($dark-color, 20%)
     width: fit-content
     min-width: 200px
     padding: 2px
@@ -272,10 +272,10 @@ a
     cursor: pointer
     a
       text-decoration: none
-      color: $primary-dark
+      color: $dark-color
   
   .work-technologies
-    color: $bright-color
+    color: lighten($bright-color, 20%)
     margin-bottom: 15px
     font-size: 14px
     &:before
@@ -292,17 +292,11 @@ a
 
   .work-description
     display: none
-    small
-      color: #555
+    padding: 10px
   &:hover
     .work-description
       display: block
       display: none
-
-
-.work-example.move-in
-  animation: moveIn .3s
-  display: flex
 
 .social-networks
   list-style: none
@@ -378,10 +372,13 @@ a
     :not(.dark-title)
       color: #fff
       margin-bottom: 10px
-
+  .cover-phrase
+    font-size: 30px
+    margin-bottom: 20px
+  .div-title
   #logo-cover
     top: 20%
-    left: -200px
+    left: 25%
     width: 250px
     height: 250px
     font-size: 90px
@@ -401,7 +398,7 @@ a
     margin: 30% 0
     padding: 20px
     .cover-phrase
-      font-size: 20px
+      font-size: 50px
   
   .cover
     flex-direction: column

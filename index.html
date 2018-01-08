@@ -8,6 +8,9 @@
   <title>Jesus Guerrero</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="assets/css/main.css?version=2.0">
+  <link rel="stylesheet" href="assets/css/animate.css?version=2.0">
+  <link rel="stylesheet" href="assets/third/slick/slick.css?version=2.0">
+  <link rel="stylesheet" href="assets/third/slick/slick-theme.css?version=2.0">
   <link href="favicon.png" rel="icon" type="image/png" />
 </head>
 
@@ -36,21 +39,20 @@
 
     <!-- cover section -->
     <article class="section-part cover" id="cover">
-      <div class="cards col-5">
+      <div class="cards col-5 hidden-xs">
         <div class="diagonal-separator hidden-xs"></div>
-        <div id="logo-cover" class="">JG</div>
+        <div id="logo-cover" class="animated slideInLeft hidden-xs">JG</div>
       </div>
 
       <div class="main-content">
-        <div class="cover-phrase">
-          <p>
-            <span>"Keep it simple, but make it awesome"</span>
-          </p>
-        </div>
-        <div class="cover-title">Jesús Guerrero Alvarez</div>
-        <div class="cover-sub-title">Front-End Developer</div>
+        <p class="cover-phrase animated slideInUp">
+          "Keep it simple, but make it awesome" 
+        </p>
 
-        <small class="hidden-xs">*Press key down and key up
+        <div class="cover-title animated slideInUp">Jesús Guerrero Alvarez</div>
+        <div class="cover-sub-title animated slideInUp">Web Developer</div>
+
+        <small class="hidden-xs  animated slideInUp">*Press key down and key up
           <br>to move through the webpage </small>
       </div>
 
@@ -73,18 +75,18 @@
       </div>
 
 
-      <img id="i-splash-computer" class="material-icons splash-i" src="./assets/img/ic_computer.svg" />
-      <img id="i-splash-books" class="material-icons splash-i" src="./assets/img/ic_command_line.svg" />
+      <img id="i-splash-computer" class="material-icons splash-i animated fadeIn" src="./assets/img/ic_computer.svg" />
+      <img id="i-splash-books" class="material-icons splash-i animated fadeIn" src="./assets/img/ic_command_line.svg" />
 
 
       <button class="next btn-primary btn-left hidden-xs" data-href="skills">
         <i class="material-icons">arrow_downward</i> Skills</button>
     </article>
 
+
     <article id="skills" class="section-part skills">
-      <div class="div-title">
-        <h2>Skills</h2>
-      </div>
+      <h2 class="div-title"> Skills</h2>
+
       <div class="card-container inverse">
         <div class="cards col-5 ">
 
@@ -129,67 +131,39 @@
     </article>
 
     <article id="portfolio" class="section-part portfolio">
-      <div class="div-title dark-title">
-        <h2>Work</h2>
-      </div>
+      <h2 class="div-title dark-title"> Work </h2>
 
-      <div class="card-container work-example-container">
+      <div class="card-container work-example-container" id="most-proud">
 
-        <div class="work-example">
-          <div class="work-images">
-            <img class="project-images" src="./assets/img/home.png" alt="">
-          </div>
-          <div class="work-title">
-            <h2 class="text-center">IC Payment</h2>
-          </div>
-          <div class="work-technologies text-center">PHP/CodeIgniter AJAX JavaScript Sass SQL/MySql</div>
-        </div>
-
-        <div class="work-example">
-          <div class="work-images">
-            <a href="https://github.com/jesusantguerrero/icnote">
-              <img class="project-images" src="./assets/img/img6.png" alt="">
-            </a>
-          </div>
-          <div class="work-title">
-            <a href="https://github.com/jesusantguerrero/icnote">
-              <h2 class="text-center">IC Note</h2>
-            </a>
-          </div>
-          <div class="work-technologies text-center">JavaScript Electron Nodejs</div>
-          <div class="work-description text-center">
-            <small>
-              A note taker using web technologies and Electron with IC Note you can save notes, todo lists using markdown
-            </small>
-          </div>
-        </div>
-
-        <div class="work-example">
-          <div class="work-images">
-            <a href="http://jesusantguerrero.com/neighborhood-tour/">
-              <img class="project-images" src="./assets/img/tour.png" alt="">
-            </a>
-          </div>
-          <div class="work-title">
-            <a href="http://jesusantguerrero.com/neighborhood-tour/">
-              <h2 class="text-center">Tour</h2>
-            </a>
-          </div>
-          <div class="work-technologies text-center">JavaScript Design Patterns | MV* Model | Google Maps API | Vue.js</div>
-        </div>
 
       </div>
 
-      <button class="next btn-dark btn-left hidden-xs" data-href="insanecode">Insane Code
+      <button class="next btn-dark btn-left hidden-xs" data-href="portfolio-frontend"> Front-end
         <i class="material-icons">arrow_downward</i>
       </button>
     </article>
 
+    <article id="portfolio-frontend" class="section-part portfolio">
+      <h2 class="div-title dark-title"> Front-end </h2>
+      <div class="card-container work-example-container" id="work-front-end"></div>
+
+      <button class="next btn-dark btn-left hidden-xs" data-href="code-of-day">Code of Day
+        <i class="material-icons">arrow_downward</i>
+      </button>
+    </article>
+
+    <article class="section-part insanecode" id="code-of-day">
+            
+      <button class="next btn-white hidden-xs" data-href="insanecode"> Insane Code
+        <i class="material-icons">arrow_downward</i>
+      </button>
+
+    </article>
+
     <article class="section-part insanecode" id="insanecode">
 
-      <div class="div-title">
-        <h2>My Project</h2>
-      </div>
+      <h2 class="div-title"> My Project</h2>
+
       <div class="card-container">
         <div class="cards col-5">
           <h1>What is?</h1>
@@ -227,9 +201,7 @@
     </article>
 
     <article id="contact" class="section-part contacts row-9">
-      <div class="div-title">
-        <h2>Contact</h2>
-      </div>
+      <h2 class="div-title"> Contact</h2>
 
       <div class="card-container">
         <div class=" cards splash-images col-5 hidden-xs">
@@ -259,17 +231,18 @@
                 <span>github.com/jesusantguerrero</span>
               </a>
             </li>
-            <li>
-              <a target="_blank" href="https://web.facebook.com/Jesusant.guerrero">
-                <img class="net-icons" src="assets/img/ic_social_facebook.svg" alt="Jesus Guerrero's acount in Facebook">
-                <span>Jesus Guerrero</span>
-              </a>
-            </li>
 
             <li>
               <a target="_blank" href="https://twitter.com/JesusntGuerrero">
                 <img class="net-icons" src="assets/img/ic_social_twitter.svg" alt="Jesus Guerrero's acount in Twitter">
                 <span>@jesusntguerrero</span>
+              </a>
+            </li>
+
+            <li>
+              <a target="_blank" href="https://codepen.io/freesgen">
+                <img class="net-icons" src="assets/img/ic_social_twitter.svg" alt="Jesus Guerrero's acount in Codepen">
+                <span>codepen/freesgen</span>
               </a>
             </li>
           </ul>
@@ -303,8 +276,12 @@
     ga('send', 'pageview');
   </script>
   <!-- end of google analytics -->
+<<<<<<< HEAD
   <script src="assets/js/jquery-3.2.1.min.js"></script>
   <script src="assets/js/base.js?version-1.0"></script>
+=======
+  <script src="./assets/js/bundle.js"></script>
+>>>>>>> ultimate-version
 </body>
 
 </html>
