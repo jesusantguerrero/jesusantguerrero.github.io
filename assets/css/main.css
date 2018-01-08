@@ -852,11 +852,9 @@ a {
       bottom: 5px;
       transition: all ease 0.2s; }
   .work-example .work-description {
-    display: none;
     padding: 10px; }
   .work-example:hover .work-description {
-    display: block;
-    display: none; }
+    display: block; }
 
 .social-networks {
   list-style: none; }
