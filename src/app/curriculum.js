@@ -31,7 +31,7 @@ const portfolio = [
     type: 'frontend'
   },
   { 
-    title: 'Tic Tac Toe', 
+    title: 'Simon Game', 
     technologies: ['javascript', 'vue.js', 'design-patterns', 'sass', 'custom AI'],
     description: 'The clasic simon game in the web and programmer version',
     image: './assets/img/simon.png', 
@@ -52,7 +52,7 @@ const portfolio = [
     title: 'IC Note',
     technologies: ['javascript', 'electron', 'node.js'],
     description: 'Desktop Markdown note-taker using Electron',
-    image: './assets/img/wikiapp.png', 
+    image: './assets/img/img7.png', 
     link: 'https://github.com/jesusantguerrero/icnote', 
     type: 'most proud'
   },

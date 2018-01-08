@@ -53,7 +53,7 @@ const view = {
 
     return `
       <div class="div-title">
-        <h2>Code of the day : ${item.name}</h2>
+        <h2 class="div-title">Code of the day : ${item.name}</h2>
       </div>
       ${item.code}
     `
