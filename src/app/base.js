@@ -60,8 +60,6 @@ export default () => {
     goTo(e, $(this), 'button')
   })
 
- 
-
 
 
 // main Functions
@@ -233,12 +231,6 @@ export default () => {
 
     workExample.on('mouseleave', function () {
       workExample.css({opacity: '1'})
-    })
-
-    $.each(workExample, function (index, el) {
-      setInterval(function () {
-        el.className = el.className + ' move-in'
-      }, 500)
     })
   }
 

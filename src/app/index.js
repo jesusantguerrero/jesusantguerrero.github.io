@@ -24,25 +24,30 @@ const view = {
 
   FrontEnd() {
     const portfolio = controller.getPortfolio()
-    const container = document.querySelector('#work-front-end')
+    const $frontEnd = document.querySelector('#work-front-end')
+    const $mostProud = document.querySelector('#most-proud')
     
     portfolio.forEach((item) => {
-      if (item.type == 'frontend')
-        container.innerHTML += this.renderWorkItem(item)
+      if (item.type == 'frontend') {
+        $frontEnd.innerHTML += this.renderWorkItem(item)
+      } else {
+        $mostProud.innerHTML += this.renderWorkItem(item)
+      }
     })
   },
 
   CodeOfDay() {
    const pens = controller.getCodePens()
-   const i = Math.floor(Math.random() * pens.length)
+   const { codes, src } = pens
+   const i = Math.floor(Math.random() * codes.length)
    const container = document.querySelector('#code-of-day')
 
-   container.innerHTML = this.renderCodeOfDay(pens[i]) + container.innerHTML
+   container.innerHTML = this.renderCodeOfDay(codes[i], src) + container.innerHTML
   },
 
-  renderCodeOfDay(item) {
+  renderCodeOfDay(item, src) {
     const s = document.createElement('script');
-    s.src = item.src
+    s.src = src
     s.async = true
     document.body.appendChild(s)
 
@@ -65,7 +70,7 @@ const view = {
           <h2 class="text-center">${workItem.title}</h2>
         </div>
         <div class="work-technologies text-center">${workItem.technologies.join(' | ')}</div>
-        <div class="description">${workItem.description}</div>
+        <div class="work-description"><p>${workItem.description}</p></div>
         <div class="see"><a href="${workItem.link}"> See </a></div>
       </div>  
     `

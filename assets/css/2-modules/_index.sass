@@ -208,16 +208,18 @@ a
 
 .work-example
   width: 30%
-  padding: 10px
   box-shadow: 1px 4px 4px rgba(0,0,0,.2)
   display: flex
   flex-direction: column
   justify-content: center
   align-items: center
   position: relative
-  display: none
+  background: #fff
+  color: $dark-color
+  border-radius: 2px
+  border: 1px solid #ccc
+  justify-content: flex-start
   
-
   &:hover
     transform: scale(1.04)
   &:after
@@ -266,7 +268,7 @@ a
   .work-title
     margin: 15px
     font-weight: bolder
-    color: $primary-dark
+    color: darken($dark-color, 20%)
     width: fit-content
     min-width: 200px
     padding: 2px
@@ -274,10 +276,10 @@ a
     cursor: pointer
     a
       text-decoration: none
-      color: $primary-dark
+      color: $dark-color
   
   .work-technologies
-    color: $bright-color
+    color: lighten($bright-color, 20%)
     margin-bottom: 15px
     font-size: 14px
     &:before
@@ -294,17 +296,11 @@ a
 
   .work-description
     display: none
-    small
-      color: #555
+    padding: 10px
   &:hover
     .work-description
       display: block
       display: none
-
-
-.work-example.move-in
-  animation: moveIn .3s
-  display: flex
 
 .social-networks
   list-style: none
@@ -432,7 +428,6 @@ a
   .work-example
     width: 85%
     margin: 20px 7.5%
-    border: 1px solid #ccc
   
     .work-images
       justify-content: center
