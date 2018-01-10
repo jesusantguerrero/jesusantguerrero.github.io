@@ -8,9 +8,11 @@ button.next
   font-weight: bolder
   cursor: pointer
   transition: all ease .5s
+  opacity: .3
 
   &:hover
     height: 55px
+    opacity: 1
 
 .btn-left
   left: 0
@@ -54,3 +56,20 @@ button.next
   padding: 0 5px
   font-size: 18px
   font-weight: bolder
+
+.see
+  width: 100%
+  display: flex
+  background: whitesmoke
+  justify-content: center
+  align-items: center
+  height: 48px
+  border-top: 1px solid #ccc
+  align-self: flex-end
+  justify-self: flex-end
+  transition: all ease .3s
+  text-decoration: none
+  +makeFlex()
+  &:hover
+    background: $dark-color
+    color: white

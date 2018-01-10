@@ -347,9 +347,11 @@ button.next {
   font-size: 20px;
   font-weight: bolder;
   cursor: pointer;
-  transition: all ease 0.5s; }
+  transition: all ease 0.5s;
+  opacity: 0.3; }
   button.next:hover {
-    height: 55px; }
+    height: 55px;
+    opacity: 1; }
 
 .btn-left {
   left: 0; }
@@ -393,6 +395,26 @@ button.next {
   font-size: 18px;
   font-weight: bolder; }
 
+.see {
+  width: 100%;
+  display: flex;
+  background: whitesmoke;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  border-top: 1px solid #ccc;
+  align-self: flex-end;
+  justify-self: flex-end;
+  transition: all ease 0.3s;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+  .see:hover {
+    background: #445D6E;
+    color: white; }
+
 @font-face {
   font-family: squarefont;
   src: url("../fonts/Square.ttf"); }
@@ -424,7 +446,10 @@ body {
     margin: 3%; }
 
   body, article {
-    overflow-y: auto; } }
+    overflow-y: auto; }
+
+  .animated.slideInLeft.hidden-xs {
+    display: none; } }
 header {
   position: fixed;
   width: 100%;
@@ -765,6 +790,7 @@ a {
 .project-images {
   display: inline-block;
   max-width: 100%;
+  width: 100%;
   height: auto;
   max-height: 156px;
   border-radius: 1px;
@@ -786,7 +812,8 @@ a {
   color: #445D6E;
   border-radius: 2px;
   border: 1px solid #ccc;
-  justify-content: flex-start; }
+  justify-content: flex-start;
+  height: 348px; }
   .work-example:hover {
     transform: scale(1.04); }
   .work-example:after {
@@ -820,20 +847,24 @@ a {
   .work-example:hover .work-technologies:before {
     transform: scale(0.98) translate(2px, 2px);
     box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2); }
+  .work-example .work-body {
+    height: 40%; }
+  .work-example .btn-work {
+    height: 15%; }
   .work-example .work-images {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    width: 100%; }
+    width: 100%;
+    height: 45%; }
   .work-example .work-title {
     margin: 15px;
     font-weight: bolder;
     color: #1d282f;
-    width: fit-content;
+    width: 100%;
     min-width: 200px;
     padding: 2px;
     border-radius: 2px;
-    cursor: pointer; }
+    cursor: pointer;
+    text-align: center; }
     .work-example .work-title a {
       text-decoration: none;
       color: #445D6E; }
@@ -852,7 +883,8 @@ a {
       bottom: 5px;
       transition: all ease 0.2s; }
   .work-example .work-description {
-    padding: 10px; }
+    padding: 10px;
+    font-size: 14px; }
   .work-example:hover .work-description {
     display: block; }
 

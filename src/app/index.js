@@ -66,12 +66,12 @@ const view = {
         <div class="work-images">
           <img class="project-images" src="${workItem.image}" alt="${workItem.title}">
         </div>
-        <div class="work-title">
-          <h2 class="text-center">${workItem.title}</h2>
+        <div class="work-body">
+          <h2 class="work-title"${workItem.title}</h2>
+          <div class="work-technologies text-center">${workItem.technologies.join(' | ')}</div>
+          <p class="work-description">${workItem.description}</p>
         </div>
-        <div class="work-technologies text-center">${workItem.technologies.join(' | ')}</div>
-        <div class="work-description"><p>${workItem.description}</p></div>
-        <div class="see"><a href="${workItem.link}"> See </a></div>
+        <a class="see btn-work"href="${workItem.link}"> See </a>
       </div>  
     `
   }

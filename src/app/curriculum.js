@@ -58,7 +58,7 @@ const portfolio = [
   },
   { 
     title: 'Tour', 
-    technologies: ['JavaScript Design Patterns',' MV* Model' , 'Google Maps API',  'Vue.js'],
+    technologies: ['MV* Model' , 'Google Maps API',  'Vue.js'],
     description: 'Map Application, with pictures and street viewer powered by Google Maps API',
     image: './assets/img/tour.png', 
     link: 'http://jesusantguerrero.com/neighborhood-tour/', 

@@ -1,25 +1,3 @@
-<<<<<<< HEAD:assets/js/base.js
-$(function () {
-  var currentPosition = 0,
-    scrollPosition = 0,
-    menuState = false,
-    sectionsPos = [],
-    sectionsPart = {},
-    animationsState = [false, false, false],
-    $scrollElement = $('html,body'),
-    $body = $('body'),
-    $indexSection = $('section'),
-    $articles = $('article'),
-    $nav = $('#nav'),
-    $logoCover = $('#logo-cover'),
-    $coverPhrase = $('.cover-phrase'),
-    $btntoggle = $('#btnToggle'),
-    $iSplashComputer = $('#i-splash-computer'),
-    $iSplashBooks = $('#i-splash-books'),
-    $navButtons = $('.nav-buttons'),
-    $btnNext = $('.next')
-  $header = $('header')
-=======
 import $ from 'jquery';
 
 export default () => { 
@@ -44,15 +22,11 @@ export default () => {
   const $navButtons       = $('.nav-buttons');
   const $btnNext          = $('.next');
   const $header           = $('header');
->>>>>>> ultimate-version:src/app/base.js
 
   // main calls
   getSectionsOffset()
   desktopListeners()
 
-<<<<<<< HEAD:assets/js/base.js
-  // events
-=======
 // events
   $(window).on('resize', function () {
     getSectionsOffset()
@@ -61,7 +35,6 @@ export default () => {
   $(window).on('scroll', function () {
     checkPosition()
   })
->>>>>>> ultimate-version:src/app/base.js
 
   $navButtons.on('click', function (e) {
     goTo(e, $(this))
@@ -90,41 +63,10 @@ export default () => {
   })
 
 
-<<<<<<< HEAD:assets/js/base.js
-  function desktopListeners() {
-
-    if (window.innerWidth > 768) {
-      $(document.body).off()
-      $(window).on('scroll', checkPosition);
-    } else {
-      $(window).off();
-      $(window, document.body).on('scroll', checkPosition);
-    }
-=======
->>>>>>> ultimate-version:src/app/base.js
 
 // main Functions
 
-<<<<<<< HEAD:assets/js/base.js
-    if (window.innerHeight < 630) {
-      $body.off('keydown')
-    } else {
-      $body.on('keydown', function (event) {
-        moveWithKey(event)
-      })
-    }
-  }
-
-  function quitDesktopListeners() {
-    $body.off('keydown')
-    $(window).off('scroll')
-  }
-
-  // Functions
-  function moveWithKey(event) {
-=======
   function moveWithKey (event) {
->>>>>>> ultimate-version:src/app/base.js
     event.stopImmediatePropagation()
     var key = event.which
     if (key == 40 && currentPosition >= 0 && currentPosition < sectionsPos.length - 1) {
@@ -151,8 +93,6 @@ export default () => {
     desktopListeners()
   }
 
-<<<<<<< HEAD:assets/js/base.js
-=======
   function desktopListeners(){
     if (window.innerHeight < 630) {
       $body.off('keydown')
@@ -163,7 +103,6 @@ export default () => {
     }
   }
   
->>>>>>> ultimate-version:src/app/base.js
   // ===== Menu Functions =====
 
   function toggleMenu() {
@@ -231,15 +170,9 @@ export default () => {
     }
   }
 
-<<<<<<< HEAD:assets/js/base.js
-  function checkPosition() {
-    scrollPosition = $(window).scrollTop()
-
-=======
   function checkPosition () {
     scrollPosition = $(window).scrollTop();
     
->>>>>>> ultimate-version:src/app/base.js
     if (scrollPosition >= 0 && scrollPosition < sectionsPos[1]) {
 
       $header.removeClass('just-menu menu-overwhite menu-dark')
@@ -247,17 +180,8 @@ export default () => {
     } else if (scrollPosition >= sectionsPos[1] && scrollPosition < sectionsPos[2]) {
       $header.addClass('menu-overwhite')
       $header.removeClass('just-menu menu-dark')
-<<<<<<< HEAD:assets/js/base.js
-
-      if (animationsState[1] == false) {
-        splashMovement()
-        animationsState[1] = true
-      }
-    } else if (scrollPosition >= sectionsPos[2] && scrollPosition < sectionsPos[3]) {
-=======
       
     }	else if (scrollPosition >= sectionsPos[2] && scrollPosition < sectionsPos[3]) {
->>>>>>> ultimate-version:src/app/base.js
       $header.removeClass('menu-overwhite menu-dark')
       $header.addClass('just-menu')
       
@@ -277,55 +201,7 @@ export default () => {
     }
   }
 
-<<<<<<< HEAD:assets/js/base.js
-  // ==== Image animation functions ====
-
-  function coverAnimations() {
-    if (window.innerWidth < 768) {
-      $logoCover.css({
-        left: '-200px'
-      })
-      $logoCover.animate({
-        'left': '5%'
-      }, 1700)
-
-      $coverPhrase.css({
-        opacity: '0'
-      })
-      $coverPhrase.animate({
-        opacity: '1'
-      }, 1700)
-    } else {
-      $logoCover.css({
-        left: '-250px'
-      })
-      $logoCover.animate({
-        'left': '25%'
-      }, 1700)
-
-      $coverPhrase.css({
-        opacity: '0'
-      })
-      $coverPhrase.animate({
-        opacity: '1'
-      }, 1700)
-    }
-  }
-
-  function splashMovement() {
-    $('.splash-i').css({
-      opacity: '0'
-    })
-    $iSplashComputer.animate({
-      opacity: '.5'
-    }, 1700)
-    $iSplashBooks.animate({
-      opacity: '1'
-    }, 1500)
-  }
-=======
   // animations
->>>>>>> ultimate-version:src/app/base.js
 
   function knowledgeAnimations() {
     var $searcher = $('#searcher'),
@@ -370,20 +246,6 @@ export default () => {
   function workAnimations() {
     var workExample = $('.work-example')
 
-<<<<<<< HEAD:assets/js/base.js
-    $.each(workExample, function (index, el) {
-      setTimeout(function () {
-        el.className = el.className + ' move-in'
-      }, 500)
-    })
-  }
-
-  (function linksTarget() {
-    $('a').attr('target', '_blank')
-  })()
-
-})
-=======
     workExample.on('mouseover', function () {
       workExample.css({opacity: '.4'})
       $(this).css({opacity: '1'})
@@ -393,31 +255,5 @@ export default () => {
       workExample.css({opacity: '1'})
     })
   }
-
-//   (function initSlick() {
-//     $('.work-example-container').slick({
-//       centerMode: true,
-//       centerPadding: '70px',
-//       slidesToShow: 3,
-//       responsive: [
-//         {
-//           breakpoint: 768,
-//           settings: {
-//             arrows: false,
-//             centerMode: true,
-//             centerPadding: '40px',
-//             slidesToShow: 3
-//           }
-//         },
-//         {
-//           breakpoint: 480,
-//           settings: 'unslick'
-//         }
-//       ]
-//     });
-        
-//   })()
-
 })
 }
->>>>>>> ultimate-version:src/app/base.js
