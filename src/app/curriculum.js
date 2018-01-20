@@ -24,7 +24,7 @@ const portfolio = [
   },
   { 
     title: 'Wikipedia Viewer',
-    technologies: ['javascript', 'vue.js', 'design-patterns', 'sass', 'wikipedia API','AJAX'],
+    technologies: ['javascript', 'vue.js', 'sass', 'wikipedia API','AJAX'],
     description: 'It is a searcher for wikipedia articles using their API ',
     image: './assets/img/wikiapp.png', 
     link: 'https://codepen.io/freesgen/pen/zEgzaL', 
@@ -32,7 +32,7 @@ const portfolio = [
   },
   { 
     title: 'Simon Game', 
-    technologies: ['javascript', 'vue.js', 'design-patterns', 'sass', 'custom AI'],
+    technologies: ['javascript', 'vue.js', 'sass', 'custom AI'],
     description: 'The clasic simon game in the web and programmer version',
     image: './assets/img/simon.png', 
     link: 'https://codepen.io/freesgen/pen/EbwvXK?editors=0110', 
@@ -44,7 +44,7 @@ const portfolio = [
     technologies: ['PHP', 'vue.js', 'AJAX', 'sass', 'MySql', 'codeigniter'],
     description: 'Management System for an ISP Company',
     image: './assets/img/home.png', 
-    link: '#', 
+    link: 'https://ic-payment-staging.herokuapp.com', 
     type: 'most proud'
   },
   
@@ -56,6 +56,7 @@ const portfolio = [
     link: 'https://github.com/jesusantguerrero/icnote', 
     type: 'most proud'
   },
+
   { 
     title: 'Tour', 
     technologies: ['MV* Model' , 'Google Maps API',  'Vue.js'],
@@ -63,6 +64,15 @@ const portfolio = [
     image: './assets/img/tour.png', 
     link: 'http://jesusantguerrero.com/neighborhood-tour/', 
     type: 'most proud'
+  },
+
+  { 
+    title: 'IC Services Concept', 
+    technologies: ['Responsive' , 'HTML/CSS/SASS',  'Vue.js'],
+    description: 'A concept of website for Island Communication Services',
+    image: './assets/img/ics-concept-page.png', 
+    link: 'https://jesusantguerrero.com/ics-concept-page/', 
+    type: 'website'
   },
 ]
 

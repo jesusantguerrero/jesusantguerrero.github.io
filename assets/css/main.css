@@ -813,7 +813,7 @@ a {
   border-radius: 2px;
   border: 1px solid #ccc;
   justify-content: flex-start;
-  height: 348px; }
+  height: 358px; }
   .work-example:hover {
     transform: scale(1.04); }
   .work-example:after {
@@ -848,7 +848,8 @@ a {
     transform: scale(0.98) translate(2px, 2px);
     box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2); }
   .work-example .work-body {
-    height: 40%; }
+    height: 40%;
+    padding: 5px 20px; }
   .work-example .btn-work {
     height: 15%; }
   .work-example .work-images {
@@ -856,7 +857,7 @@ a {
     width: 100%;
     height: 45%; }
   .work-example .work-title {
-    margin: 15px;
+    margin: 5px;
     font-weight: bolder;
     color: #1d282f;
     width: 100%;
@@ -870,7 +871,7 @@ a {
       color: #445D6E; }
   .work-example .work-technologies {
     color: #60b9eb;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     font-size: 14px; }
     .work-example .work-technologies:before {
       content: "";
@@ -884,7 +885,8 @@ a {
       transition: all ease 0.2s; }
   .work-example .work-description {
     padding: 10px;
-    font-size: 14px; }
+    font-size: 14px;
+    overflow: hidden; }
   .work-example:hover .work-description {
     display: block; }
 

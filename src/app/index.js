@@ -26,14 +26,25 @@ const view = {
     const portfolio = controller.getPortfolio()
     const $frontEnd = document.querySelector('#work-front-end')
     const $mostProud = document.querySelector('#most-proud')
+    const $websites = document.querySelector('#work-websites')    
+    const content = {
+      frontend: [],
+      'most proud': [],
+      website: []
+    }
     
     portfolio.forEach((item) => {
-      if (item.type == 'frontend') {
-        $frontEnd.innerHTML += this.renderWorkItem(item)
-      } else {
-        $mostProud.innerHTML += this.renderWorkItem(item)
+      const theItem = this.renderWorkItem(item)
+      const {type} = item
+
+      if (content[type].length < 3) {
+        content[type].push(theItem)
       }
     })
+
+    $frontEnd.innerHTML = content.frontend.join('')
+    $websites.innerHTML = content.website.join('')
+    $mostProud.innerHTML = content['most proud'].join('')
   },
 
   CodeOfDay() {
@@ -59,7 +70,6 @@ const view = {
     `
   },
 
-
   renderWorkItem(workItem) {
     return `
       <div class="work-example">
@@ -67,15 +77,15 @@ const view = {
           <img class="project-images" src="${workItem.image}" alt="${workItem.title}">
         </div>
         <div class="work-body">
-          <h2 class="work-title"${workItem.title}</h2>
+          <h2 class="work-title">${workItem.title}</h2>
           <div class="work-technologies text-center">${workItem.technologies.join(' | ')}</div>
           <p class="work-description">${workItem.description}</p>
         </div>
-        <a class="see btn-work"href="${workItem.link}"> See </a>
+        <a target="_blank" class="see btn-work"href="${workItem.link}"> See </a>
       </div>  
     `
   }
 }
 
-  controller.init()
-  base();
+controller.init()
+base();

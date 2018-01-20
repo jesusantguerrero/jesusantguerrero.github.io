@@ -9,7 +9,7 @@ export default () => {
   const sectionsPos       = [];
   const sectionsPart      = {};
   const animationsState   = [false, false, false];
-  const $scrollElement    = $('html,body');
+  const $scrollElement    = $('html, body');
   const $body             = $('body');
   const $indexSection     = $('section');
   const $articles         = $('article');
@@ -19,7 +19,7 @@ export default () => {
   const $btntoggle        = $('#btnToggle');
   const $iSplashComputer  = $('#i-splash-computer');
   const $iSplashBooks     = $('#i-splash-books');
-  const $navButtons       = $('.nav-buttons');
+  const $navButtons       = $('.nav-buttons, .smooth');
   const $btnNext          = $('.next');
   const $header           = $('header');
 
@@ -48,12 +48,15 @@ export default () => {
     } else {
       id = element.attr('href').slice(1)
     }
+
     $scrollElement.animate({
       scrollTop: sectionsPart[id]
     }, 500, function () {
       currentPosition = getCurrentPosition()
     })
-    if (type != 'button') toggleMenu()
+    
+    const classes = Array.from(event.target.classList)
+    if (type != 'button' && !classes.includes('smooth')) toggleMenu()
   }
 
   $btntoggle.on('click', toggleMenu)
@@ -61,8 +64,6 @@ export default () => {
   $btnNext.on('click', function (e) {
     goTo(e, $(this), 'button')
   })
-
-
 
 // main Functions
 
@@ -190,12 +191,12 @@ export default () => {
         animationsState[2] = true
       }
 
-    } else if (scrollPosition >= sectionsPos[3] && scrollPosition < sectionsPos[4]) {
+    } else if (scrollPosition >= sectionsPos[3] && scrollPosition < sectionsPos[5]) {
       $header.removeClass('menu-overwhite')
       $header.addClass('just-menu menu-dark')
       //workAnimations()
 
-    } else if (scrollPosition >= sectionsPos[4] && scrollPosition < sectionsPos[5]){
+    } else if (scrollPosition >= sectionsPos[6] && scrollPosition < sectionsPos[8]){
       $header.removeClass('menu-dark menu-overwhite')
       $header.addClass('just-menu')
     }
