@@ -17,62 +17,6 @@ article
 
 // sections
 
-//  cover section 
-
-.cover,.main-content
-  display: flex
-  position: relative
-  justify-content: flex-end
-  
-.cover
-  height: 100vh
-  padding-top: 15vh
-  +bg-gradient($primary-color,$bright-color)
-
-.main-content
-  width: 50%
-  color: #fff
-  font-size: 20px
-  flex-direction: column
-  align-self: center
-
-  .cover-title
-    font-size: 20px
-    color: lighten($bright-color,30%)
-    font-weight: bolder
-
-  .cover-phrase
-    margin-bottom: 5%
-    font-size: 30px
-
-small
-  color: white
-      
-#logo-cover,
-.diagonal-separator
-  position: absolute
-
-#logo-cover
-  top: 20%
-  left: 25%
-  width: 250px
-  height: 250px
-  font-size: 250px
-  font-family: squarefont
-  color: #f8f8f8
-
-.diagonal-separator
-  width: 20px
-  height: 250px
-  transform: skew(-20deg)
-  top: 20%
-  right: 30px
-  box-shadow: none
-  background: #fff
-
-.cover-title,
-.cover-sub-title
-  display: none
  
 //  about section
 .about
@@ -190,120 +134,7 @@ a
   background: darken($primary-color,10%)
   color: #fff
 
-.project-images
-  display: inline-block
-  max-width: 100%
-  width: 100%
-  height: auto
-  max-height: 156px
-  border-radius: 1px
-  cursor: pointer
-  transition: al .3s ease
 
-
-.work-example-container
-  justify-content: space-around
-
-.work-example
-  width: 30%
-  box-shadow: 1px 4px 4px rgba(0,0,0,.2)
-  display: flex
-  flex-direction: column
-  justify-content: center
-  align-items: center
-  position: relative
-  background: #fff
-  color: $dark-color
-  border-radius: 2px
-  border: 1px solid #ccc
-  justify-content: flex-start
-  height: 358px
-  
-  &:hover
-    transform: scale(1.04)
-  &:after
-    content: ''
-    position: absolute
-    width: 30px
-    height: 10px
-    background: $bright-color
-    box-shadow: 1px 4px 4px rgba(0,0,0,.4)
-    right: -15px
-    top: 15px
-    transition: all ease .3s
-
-  &:before
-    content: ''
-    position: absolute
-    width: 15px
-    height: 3px
-    border: 3px solid $bright-color
-    box-shadow: 1px 2px 2px rgba(0,0,0,.2)
-    right: -5px
-    top: 30px
-    transition: all ease .2s
-
-  &:hover
-    &:after
-      transform: scale(1.02)
-      box-shadow: 1px 5px 5px rgba(0,0,0,.5)
-      right: -20px
-      top: 12px
-    &:before
-      transform: scale(1.05) translateX(3px)
-      box-shadow: 1px 2px 2px rgba(0,0,0,.3)
-    .work-technologies
-      &:before
-        transform: scale(.98) translate(2px,2px)
-        box-shadow: 1px 2px 2px rgba(0,0,0,.2)
-    
-  .work-body
-    height: 40%
-    padding: 5px 20px
-  .btn-work
-    height: 15%
-  .work-images
-    display: flex
-    width: 100%
-    height: 45%
-
-  .work-title
-    margin: 5px
-    font-weight: bolder
-    color: darken($dark-color, 20%)
-    width: 100%
-    min-width: 200px
-    padding: 2px
-    border-radius: 2px
-    cursor: pointer
-    text-align: center
-    a
-      text-decoration: none
-      color: $dark-color
-  
-  .work-technologies
-    color: lighten($bright-color, 20%)
-    margin-bottom: 10px
-    font-size: 14px
-    &:before
-      content: ''
-      position: absolute
-      width: 35px
-      height: 12px
-      background: $bright-color
-      box-shadow: 1px 4px 4px rgba(0,0,0,.4)
-      left: -10px
-      bottom: 5px
-      transition: all ease .20s
-  
-
-  .work-description
-    padding: 10px
-    font-size: 14px
-    overflow: hidden
-  &:hover
-    .work-description
-      display: block
 
 .social-networks
   list-style: none
@@ -343,6 +174,7 @@ a
   100%
     opacity: 1
     transform: translateX(0)
+
 /* tablets*/
 @media(max-width: 990px ) 
   .insanecode
@@ -358,15 +190,6 @@ a
   .insane-images
     width: 75%
 
-  #profile-pic
-    position: relative 
-    top: 30%
-    height: 200px
-    width: 200px
-    border-radius: 5px
-    border: 2px solid #fff
-
-
 
 @media (max-width: 768px)
   article 
@@ -379,44 +202,7 @@ a
     :not(.dark-title)
       color: #fff
       margin-bottom: 10px
-  .cover-phrase
-    font-size: 30px
-    margin-bottom: 20px
-  .div-title
-  #logo-cover
-    top: 20%
-    left: 25%
-    width: 250px
-    height: 250px
-    font-size: 90px
 
-  .cards .profile-pic
-    width: 200px
-    height: 200px
-    display: inline-block
-    border-radius: 50%
-  .brand
-    width: 90%
-  
-  .main-content,
-    width: 100%
-    flex-direction: column
-    height: 200px
-    margin: 30% 0
-    padding: 20px
-    .cover-phrase
-      font-size: 50px
-  
-  .cover
-    flex-direction: column
-    background-color: $primary-color
-    div:nth-child(1)
-      display: flex
-      justify-content: center
-    
-  .cover-title,
-  .cover-sub-title
-    display: block 
   .about
     padding-top: 100px
     flex-direction: column
@@ -429,15 +215,7 @@ a
     display: flex
     flex-direction: column
     margin-bottom: 30px
-  .project-images
-    height: 180px
-  .work-example
-    width: 85%
-    margin: 20px 7.5%
-    height: 400px
-  
-    .work-images
-      justify-content: center
+
   .inverse
     flex-direction: column-reverse
     justify-content: center
@@ -472,3 +250,6 @@ a
     .insane-images
       height: 100px
   
+  @media (max-width: 500px)
+  .about
+    height: 700px

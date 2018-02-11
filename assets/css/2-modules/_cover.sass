@@ -1,0 +1,108 @@
+
+//  cover section 
+
+.cover,.main-content
+  display: flex
+  position: relative
+  justify-content: flex-end
+  
+.cover
+  height: 100vh
+  padding-top: 15vh
+  +bg-gradient($primary-color,$bright-color)
+
+.main-content
+  width: 50%
+  color: #fff
+  font-size: 20px
+  flex-direction: column
+  align-self: center
+
+.cover-title
+  font-size: 20px
+  color: lighten($bright-color,30%)
+  font-weight: bolder
+
+.cover-phrase
+  margin-bottom: 5%
+  font-size: 30px
+
+small
+  color: white
+      
+#logo-cover,
+.diagonal-separator
+  position: absolute
+
+#logo-cover
+  top: 20%
+  left: 25%
+  width: 250px
+  height: 250px
+  font-size: 250px
+  font-family: squarefont
+  color: #f8f8f8
+
+.diagonal-separator
+  width: 20px
+  height: 250px
+  transform: skew(-20deg)
+  top: 20%
+  right: 30px
+  box-shadow: none
+  background: #fff
+
+@media(max-width: 990px ) 
+  #profile-pic
+    position: relative 
+    top: 30%
+    height: 200px
+    width: 200px
+    border-radius: 5px
+    border: 2px solid #fff
+
+@media (max-width: 768px)
+  .cover
+    padding-top: 0
+
+  .cover-phrase
+    margin-bottom: 20px
+    font-size: 30px
+    line-height: 1.4
+    text-align: center
+
+  #logo-cover
+    top: 20%
+    left: 31%
+    width: 250px
+    height: 250px
+    font-size: 90px
+
+  .cards .profile-pic
+    width: 200px
+    height: 200px
+    display: inline-block
+    border-radius: 50%
+  .brand
+    width: 90%
+  
+  .main-content,
+    width: 100%
+    flex-direction: column
+    margin: 0 0 0 0
+    width: 100%
+    height: 80%
+    padding: 0 0 0 0
+    justify-content: center
+    align-items: center
+  
+  .cover
+    flex-direction: column
+    background-color: $primary-color
+    div:nth-child(1)
+      display: flex
+      justify-content: center
+    
+  .cover-title,
+  .cover-sub-title
+    display: block 
