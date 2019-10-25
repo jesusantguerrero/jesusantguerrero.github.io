@@ -35,7 +35,7 @@ const portfolio = [
     technologies: ['javascript', 'vue.js', 'sass', 'pug'],
     description: 'timer that allow users to follow the promodoro technique',
     image: './assets/img/promodoro-timer.png', 
-    link: 'https://codepen.io/freesgen/pen/EbwvXK?editors=0110', 
+    link: 'https://codepen.io/freesgen/pen/bYwpNO', 
     type: 'frontend'
   },
 
@@ -62,7 +62,7 @@ const portfolio = [
     technologies: ['MV* Model' , 'Google Maps API',  'Vue.js'],
     description: 'Map Application, with pictures and street viewer powered by Google Maps API',
     image: './assets/img/tour.png', 
-    link: 'http://jesusantguerrero.com/neighborhood-tour/', 
+    link: 'https://jesusantguerrero.github.io/neighborhood-tour/', 
     type: 'most proud'
   },
 
@@ -79,7 +79,7 @@ const portfolio = [
     technologies: ['Responsive' , 'HTML/CSS/SASS',  'Vue.js'],
     description: 'A concept of website for Island Communication Services',
     image: './assets/img/ics-concept-page.png', 
-    link: 'https://jesusantguerrero.com/ics-concept-page/', 
+    link: 'https://jesusantguerrero.github.io/ics-concept-page/', 
     type: 'website'
   },
   { 
